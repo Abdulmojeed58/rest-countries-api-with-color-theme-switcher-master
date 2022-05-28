@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0bec037e3d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Countries search</title>
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <header>
+            <h1>Where in the world?</h1>
+            <div class="dark-light">
+                <i class="fa-solid fa-moon"></i>
+                <h3>Dark Mode</h3>
+            </div>
+        </header>
+
+        <main>
+            <form>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <!-- <p class="search-btn"></p> -->
+                    <input type="text" placeholder="Search for a country..." data-input>
+                </div>
+                <div class="region">
+                    <div class="filter-btn">
+                        <button>Filter by Region</button>
+                        <div class="button"></div>
+                    </div>
+                    <div class="list active">
+                        <ul>
+                            <li>Africa</li>
+                            <li>America</li>
+                            <li>Asia</li>
+                            <li>Europe</li>
+                            <li>Oceania</li>
+                            <li>North America</li>
+                            <li>SouthAmerica</li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Countries////// -->
+            <section class="countries">
+                <!-- <div class="card country">
+                    <div class="country-img"></div>
+                    <div class="country-content">
+
+                        <h3 class="country-name">Germany</h3>
+                        <p class="country-population">Population: <span>81,770,900</span></p>
+                        <p class="country-region">Region: <span>Europe</span></p>
+                        <p class="country-capital">Capital: <span>Berlin</span></p>
+                    </div>
+                </div>
+
+
+                <div class="card country">
+                    <div class="country-img"></div>
+                    <div class="country-content">
+
+                        <h3 class="country-name">Germany</h3>
+                        <p class="country-population">Population: <span>81,770,900</span></p>
+                        <p class="country-region">Region: <span>Europe</span></p>
+                        <p class="country-capital">Capital: <span>Berlin</span></p>
+                    </div>
+                </div>
+                <div class="card country">
+                    <div class="country-img"></div>
+                    <div class="country-content">
+
+                        <h3 class="country-name">Germany</h3>
+                        <p class="country-population">Population: <span>81,770,900</span></p>
+                        <p class="country-region">Region: <span>Europe</span></p>
+                        <p class="country-capital">Capital: <span>Berlin</span></p>
+                    </div>
+                </div>
+                <div class="card country">
+                    <div class="country-img"></div>
+                    <div class="country-content">
+
+                        <h3 class="country-name">Germany</h3>
+                        <p class="country-population">Population: <span>81,770,900</span></p>
+                        <p class="country-region">Region: <span>Europe</span></p>
+                        <p class="country-capital">Capital: <span>Berlin</span></p>
+                    </div>
+                </div>
+                <div class="card country">
+                    <div class="country-img"></div>
+                    <div class="country-content">
+
+                        <h3 class="country-name">Germany</h3>
+                        <p class="country-population">Population: <span>81,770,900</span></p>
+                        <p class="country-region">Region: <span>Europe</span></p>
+                        <p class="country-capital">Capital: <span>Berlin</span></p>
+                    </div>
+                </div>
+                <div class="card country">
+                    <div class="country-img"></div>
+                    <div class="country-content">
+
+                        <h3 class="country-name">Germany</h3>
+                        <p class="country-population">Population: <span>81,770,900</span></p>
+                        <p class="country-region">Region: <span>Europe</span></p>
+                        <p class="country-capital">Capital: <span>Berlin</span></p>
+                    </div>
+                </div>
+                <div class="card country">
+                    <div class="country-img"></div>
+                    <div class="country-content">
+
+                        <h3 class="country-name">Germany</h3>
+                        <p class="country-population">Population: <span>81,770,900</span></p>
+                        <p class="country-region">Region: <span>Europe</span></p>
+                        <p class="country-capital">Capital: <span>Berlin</span></p>
+                    </div>
+                </div>
+                <div class="card country">
+                    <div class="country-img"></div>
+                    <div class="country-content">
+
+                        <h3 class="country-name">Germany</h3>
+                        <p class="country-population">Population: <span>81,770,900</span></p>
+                        <p class="country-region">Region: <span>Europe</span></p>
+                        <p class="country-capital">Capital: <span>Berlin</span></p>
+                    </div>
+                </div> -->
+
+
+                <!-- countries-details -->
+                
+                
+            </section>
+            <div class="country-details active">
+                <button class="back-btn">
+                    <div class="back-img"></div>
+                    Back
+                </button>
+                <div class="country-flex">
+                    <div class="country-img"></div>
+
+                    <div class="flex2">
+
+                        <div class="country-content1">
+                            <h3 class="country-name">Germany</h3>
+                            <p class="country-population">Population: <span>81,770,900</span></p>
+                            <p class="country-region">Region: <span>Europe</span></p>
+                            <p class="country-sub-region">Sub Region: <span>Western Europe</span></p>
+                            <p class="country-capital">Capital: <span>Berlin</span></p>
+                        </div>
+
+                        <div class="country-content2">
+                            <p class="country-domain">
+                                top level domain: <span>.be</span>
+                            </p>
+                            <p class="country-currencies">
+                                currencies: 
+                                <span>euro</span>
+                            </p>
+                            <p class="country-languages">
+                                languages: <span>dutch, french, german</span>
+                            </p>
+                        </div>
+
+                        <div class="border-countries">
+                            <p>Border countries: </p>
+                            <button>france</button>
+                            <button>germany</button>
+                            <button>netherlands</button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
