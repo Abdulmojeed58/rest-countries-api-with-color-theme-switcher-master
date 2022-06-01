@@ -56,7 +56,7 @@ function mapData(result, wordToMatch, region){
             <h3 class="country-name">${res.name}</h3>
             <p class="country-population">Population: <span>${res.population.toLocaleString()}</span></p>
             <p class="country-region">Region: <span>${res.region}</span></p>
-            <p class="country-capital">Capital: <span>${res.capital}</span></p>
+            <p class="country-capital">Capital: <span>${res.capital ?? ""}</span></p>
         </div>
     </div>
         `
@@ -66,7 +66,7 @@ function mapData(result, wordToMatch, region){
 }
 function filt(result, wordToMatch, region){
     return result.filter(res=>{
-        let regex = new RegExp(`^${wordToMatch}`, 'gi')
+        let regex = new RegExp(`${wordToMatch}`, 'gi')
         return res.name.match(regex) || res.region === region
     })
 }
@@ -106,7 +106,7 @@ countryDetails.innerHTML = `
               <p class="country-population">Population: <span>${data.population.toLocaleString()}</span></p>
               <p class="country-region">Region: <span>${data.region}</span></p>
               <p class="country-sub-region">Sub Region: <span>${data.subregion}</span></p>
-              <p class="country-capital">Capital: <span>${data.capital}</span></p>
+              <p class="country-capital">Capital: <span>${data.capital ?? ""}</span></p>
           </div>
 
           <div class="country-content2">

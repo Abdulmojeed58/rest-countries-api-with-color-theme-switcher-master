@@ -148,7 +148,7 @@ input::placeholder {
     background-color: var(--Dark-Blue-Element);
     width: 100%;
     border-radius: 10px;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow, 2px 2px 5px 0px hsl(207, 26%, 17%));
     color: var(--Dark-Gray-input);
     z-index: 5;
     cursor: pointer;
