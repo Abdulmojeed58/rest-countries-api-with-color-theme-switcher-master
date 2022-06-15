@@ -15,6 +15,8 @@ const main = $('main')
 $('.dark-light').addEventListener("click", ()=>{
     body.classList.toggle('light-mode')
 })
+
+///// SHOW LIST OF RIGIONS /////////
 filterBtn.addEventListener("click", ()=>{
     list.classList.toggle("active")
 })
@@ -32,12 +34,24 @@ filterBtn.addEventListener("click", ()=>{
 
 //////FETCH DATA FROM COUNTRY API ///////////
 async function fetchCountryData(e){
-    const res = await fetch("https://restcountries.com/v2/all?fields=name,capital,currencies,population,region,subregion,topleveldomain,nativename,flag")
+    const res = await fetch("https://restcountries.com/v2/all?fields=name,capital,currencies,population,region,subregion,topleveldomain,nativename,flag,languages,borders")
     const data = await res.json()
     mapData(data, this.value, this.textContent);
     displayAll(e, data)
-
+    // return data.map(d=>{
+    //     if(d.borders){
+    //         d.borders.forEach(c=>console.log(c))
+            
+    //     }
+    // })
+    // lag(data)
 }
+
+// let arr = [[1,2,3,4,5], [6,7,8]]
+
+// arr.forEach(a=>a.forEach(b=>console.log(b)))
+
+// fetchCountryData()
 
 let regex = new RegExp(" ", "g")
 
@@ -64,6 +78,7 @@ function mapData(result, wordToMatch, region){
     element.innerHTML = rest
     
 }
+
 function filt(result, wordToMatch, region){
     return result.filter(res=>{
         let regex = new RegExp(`${wordToMatch}`, 'gi')
@@ -84,6 +99,13 @@ function displayAll(e, datas){
             countryDetails.classList.add("country-details")
             body.appendChild(countryDetails)
             main.classList.add('active')
+
+            // let d = data.borders.map(c=>{
+            //     if(data.borders){
+            //         console.log(c)
+            //     }
+            // })
+            
 
 countryDetails.innerHTML = `
       <button class="back-btn">
@@ -118,23 +140,23 @@ countryDetails.innerHTML = `
                   <span>${data.currencies[0].name}</span>
               </p>
               <p class="country-languages">
-                  languages: <span>dutch, french, german</span>
+                  languages: <span>${data.languages.map(a=>a.name).join(', ')}</span>
               </p>
           </div>
 
           <div class="border-countries">
               <p>Border countries: </p>
-              <button>france</button>
-              <button>germany</button>
-              <button>netherlands</button>
+              <button>${data.borders[0] ?? ''}</button>
+              <button>${data.borders[1] ?? ''}</button>
+              <button>${data.borders[2] ?? ''}</button>
+              <button>${data.borders[3] ?? ''}</button>
+              <button>${data.borders[4] ?? ''}</button>
           </div>
 
 
       </div>
   </div>
         `
-
-
 
         }
 
