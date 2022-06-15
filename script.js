@@ -38,20 +38,9 @@ async function fetchCountryData(e){
     const data = await res.json()
     mapData(data, this.value, this.textContent);
     displayAll(e, data)
-    // return data.map(d=>{
-    //     if(d.borders){
-    //         d.borders.forEach(c=>console.log(c))
-            
-    //     }
-    // })
-    // lag(data)
+
 }
 
-// let arr = [[1,2,3,4,5], [6,7,8]]
-
-// arr.forEach(a=>a.forEach(b=>console.log(b)))
-
-// fetchCountryData()
 
 let regex = new RegExp(" ", "g")
 
@@ -146,11 +135,12 @@ countryDetails.innerHTML = `
 
           <div class="border-countries">
               <p>Border countries: </p>
-              <button>${data.borders[0] ?? ''}</button>
-              <button>${data.borders[1] ?? ''}</button>
-              <button>${data.borders[2] ?? ''}</button>
-              <button>${data.borders[3] ?? ''}</button>
-              <button>${data.borders[4] ?? ''}</button>
+              <button>${data.borders ? data.borders[0]:''}</button>
+              <button>${data.borders ? data.borders[1]:''}</button>
+              <button>${data.borders ? data.borders[2]:''}</button>
+              <button>${data.borders ? data.borders[3]:''}</button>
+              <button>${data.borders ? data.borders[4]:''}</button>
+              
           </div>
 
 
